@@ -8,7 +8,7 @@ const app = express()
 const httpserver=http.createServer(app)
 app.use(bodyparser.json());
 app.use(cors());
-const mailrouter = require('../Project_backend/mailsection/contactmail.js')
+const mailrouter = require('./mailsection/contactmail')
 // mongoose.connect("mongodb://localhost/newone").then(() => console.log("mongoose connected"))
 mongoose.connect("mongodb+srv://thejusjoseph:dwMMlpOhly7HFKgx@cluster0.2mkkvws.mongodb.net/test?retryWrites=true&w=majority").then(() => console.log("mongoose connected"))
 const DataModel=mongoose.model('data',{})
